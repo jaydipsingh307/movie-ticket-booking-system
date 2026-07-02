@@ -36,7 +36,7 @@ function Admin() {
             formData.append("image", image);
 
             await axios.post(
-                "http://localhost:5001/api/movies",
+                "https://movie-ticket-backend-5t6p.onrender.com//api/movies",
                 formData
             );
 

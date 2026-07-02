@@ -22,7 +22,7 @@ function Payment() {
 
         try {
 
-            await axios.post("http://localhost:5001/api/bookings", {
+            await axios.post("https://movie-ticket-backend-5t6p.onrender.com//api/bookings", {
 
                 customerName: state.customerName,
                 mobile: state.mobile,

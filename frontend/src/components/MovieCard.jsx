@@ -7,7 +7,7 @@ function MovieCard({ movie }) {
             <div className="card shadow h-100">
 
                 <img
-                    src={`http://localhost:5001${movie.image}`}
+                    src={`https://movie-ticket-backend-5t6p.onrender.com/${movie.image}`}
                     className="card-img-top"
                     alt={movie.title}
                     style={{
