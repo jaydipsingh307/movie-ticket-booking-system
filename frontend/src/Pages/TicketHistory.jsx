@@ -15,7 +15,7 @@ function TicketHistory() {
     const fetchBookings = async () => {
 
         const res = await axios.get(
-            "https://movie-ticket-backend-5t6p.onrender.com//api/bookings"
+            "https://movie-ticket-backend-5t6p.onrender.com/api/bookings"
         );
 
         setBookings(res.data);

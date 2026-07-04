@@ -29,7 +29,7 @@ function Login() {
         try {
 
             const res = await axios.post(
-                "https://movie-ticket-backend-5t6p.onrender.com//api/auth/login",
+                "https://movie-ticket-backend-5t6p.onrender.com/api/auth/login",
                 {
                     email: formData.email,
                     password: formData.password,

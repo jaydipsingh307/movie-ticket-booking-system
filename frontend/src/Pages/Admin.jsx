@@ -33,10 +33,10 @@ function Admin() {
             formData.append("duration", movie.duration);
             formData.append("price", movie.price);
             formData.append("description", movie.description);
-            formData.append("image", image);
+            formData.append("poster", image);
 
             await axios.post(
-                "https://movie-ticket-backend-5t6p.onrender.com//api/movies",
+                "https://movie-ticket-backend-5t6p.onrender.com/api/movies",
                 formData
             );
 
@@ -59,110 +59,110 @@ function Admin() {
 
     return (
 
-    <div
-        className="container py-5"
-        style={{
-            minHeight: "100vh",
-            background:
-                "linear-gradient(135deg,#141e30,#243b55)",
-        }}
-    >
+        <div
+            className="container py-5"
+            style={{
+                minHeight: "100vh",
+                background:
+                    "linear-gradient(135deg,#141e30,#243b55)",
+            }}
+        >
 
-        <div className="row justify-content-center">
+            <div className="row justify-content-center">
 
-            <div className="col-md-8">
+                <div className="col-md-8">
 
-                <div
-                    className="card shadow-lg p-4"
-                    style={{ borderRadius: "20px" }}
-                >
+                    <div
+                        className="card shadow-lg p-4"
+                        style={{ borderRadius: "20px" }}
+                    >
 
-                    <h2 className="text-center text-danger mb-4">
-                        🎬 Add New Movie
-                    </h2>
+                        <h2 className="text-center text-danger mb-4">
+                            🎬 Add New Movie
+                        </h2>
 
-                    <form onSubmit={handleSubmit}>
+                        <form onSubmit={handleSubmit}>
 
-                        <input
-                            type="text"
-                            className="form-control mb-3"
-                            placeholder="Movie Title"
-                            name="title"
-                            value={movie.title}
-                            onChange={handleChange}
-                            required
-                        />
+                            <input
+                                type="text"
+                                className="form-control mb-3"
+                                placeholder="Movie Title"
+                                name="title"
+                                value={movie.title}
+                                onChange={handleChange}
+                                required
+                            />
 
-                        <input
-                            type="text"
-                            className="form-control mb-3"
-                            placeholder="Genre"
-                            name="genre"
-                            value={movie.genre}
-                            onChange={handleChange}
-                            required
-                        />
+                            <input
+                                type="text"
+                                className="form-control mb-3"
+                                placeholder="Genre"
+                                name="genre"
+                                value={movie.genre}
+                                onChange={handleChange}
+                                required
+                            />
 
-                        <input
-                            type="text"
-                            className="form-control mb-3"
-                            placeholder="Language"
-                            name="language"
-                            value={movie.language}
-                            onChange={handleChange}
-                            required
-                        />
+                            <input
+                                type="text"
+                                className="form-control mb-3"
+                                placeholder="Language"
+                                name="language"
+                                value={movie.language}
+                                onChange={handleChange}
+                                required
+                            />
 
-                        <input
-                            type="text"
-                            className="form-control mb-3"
-                            placeholder="Duration"
-                            name="duration"
-                            value={movie.duration}
-                            onChange={handleChange}
-                            required
-                        />
+                            <input
+                                type="text"
+                                className="form-control mb-3"
+                                placeholder="Duration"
+                                name="duration"
+                                value={movie.duration}
+                                onChange={handleChange}
+                                required
+                            />
 
-                        <input
-                            type="number"
-                            className="form-control mb-3"
-                            placeholder="Ticket Price"
-                            name="price"
-                            value={movie.price}
-                            onChange={handleChange}
-                            required
-                        />
+                            <input
+                                type="number"
+                                className="form-control mb-3"
+                                placeholder="Ticket Price"
+                                name="price"
+                                value={movie.price}
+                                onChange={handleChange}
+                                required
+                            />
 
-                        <input
-                            type="file"
-                            className="form-control mb-3"
-                            onChange={(e) => setImage(e.target.files[0])}
-                        />
+                            <input
+                                type="file"
+                                className="form-control mb-3"
+                                onChange={(e) => setImage(e.target.files[0])}
+                            />
 
-                        <textarea
-                            className="form-control mb-4"
-                            rows="4"
-                            placeholder="Movie Description"
-                            name="description"
-                            value={movie.description}
-                            onChange={handleChange}
-                        ></textarea>
+                            <textarea
+                                className="form-control mb-4"
+                                rows="4"
+                                placeholder="Movie Description"
+                                name="description"
+                                value={movie.description}
+                                onChange={handleChange}
+                            ></textarea>
 
-                        <button
-                            className="btn btn-danger w-100"
-                        >
-                            ➕ Add Movie
-                        </button>
+                            <button
+                                className="btn btn-danger w-100"
+                            >
+                                ➕ Add Movie
+                            </button>
 
-                    </form>
+                        </form>
+
+                    </div>
 
                 </div>
 
             </div>
 
         </div>
-
-    </div>
     );
 }
 

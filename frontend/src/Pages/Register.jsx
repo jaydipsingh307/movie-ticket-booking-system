@@ -41,7 +41,7 @@ function Register() {
         try {
 
             const res = await axios.post(
-                "https://movie-ticket-backend-5t6p.onrender.com//api/auth/register",
+                "https://movie-ticket-backend-5t6p.onrender.com/api/auth/register",
                 {
                     name: formData.name,
                     email: formData.email,

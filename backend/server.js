@@ -14,7 +14,7 @@ const app = express();
 
 const path = require("path");
 
-app.use("/posters", express.static(path.join(__dirname, "../frontend/public/posters")));
+app.use("/posters", express.static("posters"));
 
 app.use(cors());
 
