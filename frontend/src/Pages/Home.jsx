@@ -14,6 +14,7 @@ function Home() {
     const fetchMovies = async () => {
         try {
             const res = await API.get("/movies");
+            console.log(res.data);
             setMovies(res.data);
         } catch (error) {
             console.log(error);
@@ -29,7 +30,7 @@ function Home() {
     const filteredMovies = movies.filter((movie) =>
         movie.title.toLowerCase().includes(search.toLowerCase())
     );
-
+    console.log("Movies State:", movies);
     return (
         <>
             <Navbar />
@@ -44,15 +45,18 @@ function Home() {
                     setSearch={setSearch}
                 />
 
-                <div className="row">
+                <div>
                     {filteredMovies.map((movie) => (
-                        <MovieCard
-                            key={movie._id}
-                            movie={movie}
-                        />
+                        <div key={movie._id}>
+                            <h3>{movie.title}</h3>
+                            <p>{movie.genre}</p>
+                            <hr />
+                        </div>
                     ))}
                 </div>
+
             </div>
+
 
             <Footer />
         </>
