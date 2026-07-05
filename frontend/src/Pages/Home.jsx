@@ -39,7 +39,7 @@ function Home() {
 
             <div className="container mt-5">
                 <h2 className="text-center mb-4" style={{ color: "red" }}>
-                    TEST DEPLOY 123
+                    Now Showing Movies
                 </h2>
                 <SearchBar
                     search={search}
