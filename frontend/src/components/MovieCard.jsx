@@ -2,39 +2,31 @@ import { Link } from "react-router-dom";
 
 function MovieCard({ movie }) {
   return (
-    <div className="col-lg-4 col-md-6 col-sm-12">
-      <div
-        className="card shadow-lg border-0 h-100"
-        style={{ borderRadius: "15px", overflow: "hidden" }}
-      >
-        <img
-          src={`https://movie-ticket-backend-5t6p.onrender.com${movie.image}`}
-          alt={movie.title}
-          className="card-img-top"
-          style={{
-            height: "380px",
-            objectFit: "cover",
-          }}
-        />
+    <div
+      style={{
+        width: "300px",
+        border: "2px solid red",
+        margin: "20px",
+        padding: "10px",
+      }}
+    >
+      <h3>{movie.title}</h3>
 
-        <div className="card-body d-flex flex-column">
-          <h5 className="card-title fw-bold">{movie.title}</h5>
+      <img
+        src={`https://movie-ticket-backend-5t6p.onrender.com${movie.image}`}
+        width="250"
+      />
 
-          <p className="mb-1">
-            <strong>Genre:</strong> {movie.genre}
-          </p>
+      <p>{movie.genre}</p>
 
-          <p className="mb-1">
-            <strong>Language:</strong> {movie.language}
-          </p>
+      <p>{movie.language}</p>
 
-          <p className="mb-2">
-            <strong>Duration:</strong> {movie.duration}
-          </p>
+      <p>{movie.duration}</p>
 
-          <h4 className="text-success mt-auto">
-            ₹ {movie.price}
-          </h4>
+      <h4>₹{movie.price}</h4>
+    </div>
+  );
+}
 
           <Link
             to="/booking"
@@ -43,10 +35,6 @@ function MovieCard({ movie }) {
           >
             Book Ticket
           </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
+      
 
 export default MovieCard;
