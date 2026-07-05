@@ -38,23 +38,31 @@ function Home() {
             <Hero />
 
             <div className="container mt-5">
-                <h2 className="text-center mb-4">Now Showing</h2>
-
+                <h2 className="text-center mb-4" style={{ color: "red" }}>
+                    TEST DEPLOY 123
+                </h2>
                 <SearchBar
                     search={search}
                     setSearch={setSearch}
                 />
 
-                <div>
+                <div className="row">
                     {filteredMovies.map((movie) => (
-                        <div key={movie._id}>
-                            <h3>{movie.title}</h3>
-                            <p>{movie.genre}</p>
-                            <hr />
+                        <div className="col-md-4 mb-4" key={movie._id}>
+                            <div className="card shadow">
+                                <img
+                                    src={`https://movie-ticket-backend-5t6p.onrender.com${movie.image}`}
+                                    className="card-img-top"
+                                    style={{ height: "300px", objectFit: "cover" }}
+                                />
+                                <div className="card-body">
+                                    <h5>{movie.title}</h5>
+                                    <p>{movie.genre}</p>
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>
-
             </div>
 
 
