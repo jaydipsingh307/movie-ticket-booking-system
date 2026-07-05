@@ -46,21 +46,12 @@ function Home() {
                     setSearch={setSearch}
                 />
 
-                <div className="row">
+                <div className="row g-4 justify-content-center">
                     {filteredMovies.map((movie) => (
-                        <div className="col-md-4 mb-4" key={movie._id}>
-                            <div className="card shadow">
-                                <img
-                                    src={`https://movie-ticket-backend-5t6p.onrender.com${movie.image}`}
-                                    className="card-img-top"
-                                    style={{ height: "300px", objectFit: "cover" }}
-                                />
-                                <div className="card-body">
-                                    <h5>{movie.title}</h5>
-                                    <p>{movie.genre}</p>
-                                </div>
-                            </div>
-                        </div>
+                        <MovieCard
+                            key={movie._id}
+                            movie={movie}
+                        />
                     ))}
                 </div>
             </div>
