@@ -10,7 +10,7 @@ function Navbar() {
 
                 <Link className="navbar-brand fw-bold" to="/">
 
-                    🎬 Movie Ticket
+                    🎬 MovieDock
 
                 </Link>
 
