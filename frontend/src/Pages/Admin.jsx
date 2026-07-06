@@ -15,7 +15,7 @@ function Admin() {
 
     const handleChange = (e) => {
         setMovie({
-            
+            ...movie,
             [e.target.name]: e.target.value,
         });
     };
