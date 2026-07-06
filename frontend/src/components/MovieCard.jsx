@@ -14,6 +14,7 @@ function MovieCard({ movie }) {
 
       <img
         src={`https://movie-ticket-backend-5t6p.onrender.com${movie.image}`}
+        alt={movie.title}
         width="250"
       />
 
@@ -24,17 +25,16 @@ function MovieCard({ movie }) {
       <p>{movie.duration}</p>
 
       <h4>₹{movie.price}</h4>
+
+      <Link
+        to="/booking"
+        state={{ movie }}
+        className="btn btn-danger mt-3"
+      >
+        Book Ticket
+      </Link>
     </div>
   );
 }
-
-          <Link
-            to="/booking"
-            state={{ movie }}
-            className="btn btn-danger mt-3"
-          >
-            Book Ticket
-          </Link>
-      
 
 export default MovieCard;
